@@ -6,12 +6,34 @@ let db;
 // initialize default db
 function initDB() {
   db = new sqlite3.Database('./shop.db', (err) => {
-    if (err) console.error('DB Connection error:', err.message);
-    else console.log('Connected to shop inventory database');
+    if (err) {
+      console.error('DB Connection error:', err.message);
+    } else {
+      console.log('Connected to shop inventory database');
+
+      const createTableSQL = `
+        CREATE TABLE IF NOT EXISTS products (
+          id INTEGER PRIMARY KEY AUTOINCREMENT,
+          name TEXT NOT NULL,
+          price REAL NOT NULL,
+          quantity INTEGER NOT NULL,
+          category TEXT
+        );
+      `;
+
+      db.run(createTableSQL, (err) => {
+        if (err) {
+          console.error('Error creating tables:', err.message);
+        } else {
+          console.log('Main DB tables created');
+        }
+      });
+    }
   });
 
   return db;
 }
+
 
 // initialize test db
 function initTestDB() {
