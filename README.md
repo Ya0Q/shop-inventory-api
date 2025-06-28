@@ -4,12 +4,18 @@ This is a simple product inventory API. You can use it to add, view, update, and
 
 ---
 
-## Features
+## Features/tech stack
 
-- RESTful API using Express
+- RESTful API using Express.js
 - Local SQLite database (`shop.db`)
 - Automatically creates products table if empty
 - Basic CRUD operations
+Testing:
+- Jest testing framework
+- Supertest for API endpoint testing
+
+### Test Coverage: 
+![Test Coverage](./assets/coverage_report.jpeg)
 
 ---
 
@@ -41,7 +47,7 @@ This is a simple product inventory API. You can use it to add, view, update, and
 
 ---
 
-## How to run server
+## How to run 
 
 ### 1. Install Dependencies
 ```bash
@@ -55,6 +61,11 @@ node server.js
 
 Visit [http://localhost:3000/products](http://localhost:3000/products)
 
+
+### 3. Run Tests
+```bash
+npm test -- --coverage
+```
 ---
 
 ## Sample API Interactions (how to use)
