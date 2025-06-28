@@ -1,8 +1,8 @@
-- name: Install Keploy CLI
-  run: |
-    curl --silent -L https://keploy.io/ent/install.sh | bash
+name: Install Keploy CLI
+run: |
+  curl --silent -L https://keploy.io/ent/install.sh | bash
 
-- name: Run Keploy Test Suite
-  run: |
-    export KEPLOY_API_KEY=${{ secrets.KEPLOY_API_KEY }}
-    keploy test-suite --app=c6ca7ebc-c50b-41e0-90ad-cefb12467c72 --base-path http://localhost:3000/products --cloud
+name: Run Keploy Test Suite
+run: |
+  export KEPLOY_API_KEY=${{ secrets.KEPLOY_API_KEY }}
+  keploy test-suite --app=c6ca7ebc-c50b-41e0-90ad-cefb12467c72 --base-path http://localhost:3000/products --cloud
