@@ -108,3 +108,10 @@ Example with curl:
 ```bash
 curl http://localhost:3000/products
 ```
+
+### Keploy Test Report Screenshots
+![Keploy Report 1](assets/Screenshot%202025-06-28%20122804.png)
+![Keploy Report 2](assets/Screenshot%202025-06-28%20122831.png)
+![Keploy Report 3](assets/Screenshot%202025-06-28%20122936.png)
+![Keploy Report 4](assets/Screenshot%202025-06-28%20122953.png)
+![Keploy Report 5](assets/Screenshot%202025-06-28%20123018.png)
